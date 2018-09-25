@@ -1,0 +1,32 @@
+<html>
+<body>
+  <ul>
+    <li>trump</li>
+    <li>putin</li>
+    <li>devos</li>
+    <li>kavenasugh</li>
+  </ul>
+  
+    <select id="assholes">
+      <option value="0" >trump</option>
+      <option value="1" >putin</option>
+      <option value="2" >devos</option>
+      <option value="3" >kavenaugh</option>
+</select>
+
+<button onclick="removeItem()">Remove</button>
+<script>
+  function removeItem(){
+//i will get the value of the assholes ID and have it as assholes
+    var assholes=document.getElementById('assholes').value;
+//i will get the list item by the assholes index position and save it
+    var eliminate=document.getElementsByTagName('li')[assholes];
+//i will put the parent node of the list item and save it as container
+    var container=eliminate.parentNode;
+//i will remove the list item from the container
+    container.removeChild(eliminate);
+  }
+
+</script>
+</body>
+</html>
